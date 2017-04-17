@@ -59,6 +59,7 @@ TESTS_INTEGRATION = \
     test/integration/get-random \
     test/integration/self-test \
     test/integration/pcr-extension \
+    test/integration/dictionary-lockout \
     test/integration/asymmetric-encrypt-decrypt \
     test/integration/start-auth-session
 
@@ -177,6 +178,10 @@ test_integration_start_auth_session_SOURCES = test/integration/main.c \
 
 test_integration_pcr_extension_LDADD   = $(TESTS_LDADD)
 test_integration_pcr_extension_SOURCES = test/integration/pcr-extension.c \
+    test/integration/main.c
+
+test_integration_dictionary_lockout_LDADD   = $(TESTS_LDADD)
+test_integration_dictionary_lockout_SOURCES = test/integration/dictionary-lockout.c \
     test/integration/main.c
 
 test_integration_asymmetric_encrypt_decrypt_LDADD   = $(TESTS_LDADD)
